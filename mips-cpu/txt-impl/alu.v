@@ -18,6 +18,7 @@ module alu (input [31:0] srca,
             // 3'b100 DNE
             // 3'b101 DNE 
             3'b110: aluout <= srca - srcb; // AND 
+            3'b111: aluout <= srca < srcb; // SET LESS THAN
             default: aluout <= 32'bx;
         endcase
 
